@@ -1,0 +1,22 @@
+=== Test Dijkstra's on the medium undirected graph in case 3 ===
+
+Testing Dijkstra's algorithm...
+Dumping the DijkstraInfo...
+ID: [ 1]  cost:   0 path:  1
+ID: [ 2]  cost:  11 path:  1 >>  2
+ID: [ 3]  cost:  32 path:  1 >>  2 >>  3
+ID: [ 4]  cost:  61 path:  1 >>  2 >>  3 >>  4
+ID: [ 5]  cost:  13 path:  1 >>  5
+ID: [ 6]  cost:  26 path:  1 >>  5 >>  6
+ID: [ 7]  cost:  47 path:  1 >>  2 >>  3 >>  7
+ID: [ 8]  cost:  57 path:  1 >>  2 >>  3 >>  7 >>  8
+ID: [ 9]  cost:  36 path:  1 >>  5 >>  9
+ID: [10]  cost:  42 path:  1 >>  5 >> 10
+ID: [11]  cost:  93 path:  1 >>  5 >>  9 >> 14 >> 15 >> 11
+ID: [12]  cost: 105 path:  1 >>  5 >>  9 >> 14 >> 15 >> 11 >> 12
+ID: [13]  cost:  79 path:  1 >>  5 >>  9 >> 14 >> 13
+ID: [14]  cost:  51 path:  1 >>  5 >>  9 >> 14
+ID: [15]  cost:  70 path:  1 >>  5 >>  9 >> 14 >> 15
+ID: [16]  cost: 146 path:  1 >>  5 >>  9 >> 14 >> 15 >> 11 >> 12 >> 16
+
+========================================

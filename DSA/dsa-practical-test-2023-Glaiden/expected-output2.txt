@@ -1,0 +1,14 @@
+=== Test a small number of random int adds into an AVL tree ===
+
+Running addInts...
+
+AVL after adding 5 elements:
+
+type: AVL, height: 2, size: 5
+         2       
+
+     1           4       
+
+ 0           3       
+
+========================================

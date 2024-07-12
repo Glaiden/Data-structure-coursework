@@ -1,0 +1,25 @@
+=== Test a small number of random int adds and removes into an AVL tree ===
+Running addInts...
+
+AVL after adding 8 elements:
+
+type: AVL, height: 3, size: 8
+             3       
+
+     1                   6       
+
+ 0       2       4           7       
+
+                     5       
+
+Running removeInts...
+
+AVL after removing 2 elements:
+type: AVL, height: 2, size: 6
+         4       
+
+     3           6       
+
+ 2           5       7       
+
+========================================

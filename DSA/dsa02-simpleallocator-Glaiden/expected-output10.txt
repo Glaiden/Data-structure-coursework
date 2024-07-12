@@ -1,0 +1,484 @@
+=== Test allocator with external headers with repeated allocations and frees ===
+Running multiAllocFreeTest...
+
+Running allocFreeTest with: 
+objectSize:24, pageSize:136, padBytes:0, objectsPerPage:4, maxPages:8, maxObjects:32
+alignment:0, leftAlign:0, interAlign:0, headerType:EXTERNAL, headerSize = 8
+
+After 10 allocations...
+pagesInUse: 3, objectsInUse: 10, freeObjects: 2, allocations: 10, frees: 0
+
+XXXXXXXX
+  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+ XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX AA AA AA AA AA AA AA AA
+ AA AA AA AA AA AA AA AA XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX AA AA AA AA AA AA AA AA
+ AA AA AA AA AA AA AA AA XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB
+
+Dumping external header (in order of the blocks from left to right)...
+  Label: 
+ In use: 0
+Alloc #: 0
+
+  Label: 
+ In use: 0
+Alloc #: 0
+
+  Label: stu59476 //only external header has label ability
+ In use: 1
+Alloc #: 10
+
+  Label: stu10428
+ In use: 1
+Alloc #: 9
+
+XXXXXXXX
+  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+ XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB
+
+Dumping external header (in order of the blocks from left to right)...
+  Label: stu39407
+ In use: 1
+Alloc #: 8
+
+  Label: stu65916
+ In use: 1
+Alloc #: 7
+
+  Label: stu57144
+ In use: 1
+Alloc #: 6
+
+  Label: stu64833
+ In use: 1
+Alloc #: 5
+
+XXXXXXXX
+  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+ XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB
+
+Dumping external header (in order of the blocks from left to right)...
+  Label: stu29268
+ In use: 1
+Alloc #: 4
+
+  Label: stu76459
+ In use: 1
+Alloc #: 3
+
+  Label: stu63908
+ In use: 1
+Alloc #: 2
+
+  Label: stu59541
+ In use: 1
+Alloc #: 1
+
+After 5 frees...
+pagesInUse: 3, objectsInUse: 5, freeObjects: 7, allocations: 10, frees: 5
+
+XXXXXXXX
+  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+ XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX AA AA AA AA AA AA AA AA
+ AA AA AA AA AA AA AA AA XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX AA AA AA AA AA AA AA AA
+ AA AA AA AA AA AA AA AA XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB
+
+Dumping external header (in order of the blocks from left to right)...
+  Label: 
+ In use: 0
+Alloc #: 0
+
+  Label: 
+ In use: 0
+Alloc #: 0
+
+  Label: stu59476
+ In use: 1
+Alloc #: 10
+
+  Label: stu10428
+ In use: 1
+Alloc #: 9
+
+XXXXXXXX
+  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+ XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX CC CC CC CC CC CC CC CC
+ CC CC CC CC CC CC CC CC XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX CC CC CC CC CC CC CC CC
+ CC CC CC CC CC CC CC CC XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX CC CC CC CC CC CC CC CC
+ CC CC CC CC CC CC CC CC
+
+Dumping external header (in order of the blocks from left to right)...
+  Label: 
+ In use: 0
+Alloc #: 0
+
+  Label: 
+ In use: 0
+Alloc #: 0
+
+  Label: stu57144
+ In use: 1
+Alloc #: 6
+
+  Label: 
+ In use: 0
+Alloc #: 0
+
+XXXXXXXX
+  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+ XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX CC CC CC CC CC CC CC CC
+ CC CC CC CC CC CC CC CC XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX CC CC CC CC CC CC CC CC
+ CC CC CC CC CC CC CC CC XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB
+
+Dumping external header (in order of the blocks from left to right)...
+  Label: 
+ In use: 0
+Alloc #: 0
+
+  Label: 
+ In use: 0
+Alloc #: 0
+
+  Label: stu63908
+ In use: 1
+Alloc #: 2
+
+  Label: stu59541
+ In use: 1
+Alloc #: 1
+
+Running allocFreeTest with: 
+objectSize:24, pageSize:136, padBytes:0, objectsPerPage:4, maxPages:8, maxObjects:32
+alignment:0, leftAlign:0, interAlign:0, headerType:EXTERNAL, headerSize = 8
+
+After 5 allocations...
+pagesInUse: 3, objectsInUse: 10, freeObjects: 2, allocations: 15, frees: 5
+
+XXXXXXXX
+  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+ XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX AA AA AA AA AA AA AA AA
+ AA AA AA AA AA AA AA AA XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX AA AA AA AA AA AA AA AA
+ AA AA AA AA AA AA AA AA XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB
+
+Dumping external header (in order of the blocks from left to right)...
+  Label: 
+ In use: 0
+Alloc #: 0
+
+  Label: 
+ In use: 0
+Alloc #: 0
+
+  Label: stu59476
+ In use: 1
+Alloc #: 10
+
+  Label: stu10428
+ In use: 1
+Alloc #: 9
+
+XXXXXXXX
+  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+ XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB
+
+Dumping external header (in order of the blocks from left to right)...
+  Label: stu56984
+ In use: 1
+Alloc #: 13
+
+  Label: stu61595
+ In use: 1
+Alloc #: 11
+
+  Label: stu57144
+ In use: 1
+Alloc #: 6
+
+  Label: stu82607
+ In use: 1
+Alloc #: 12
+
+XXXXXXXX
+  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+ XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB
+
+Dumping external header (in order of the blocks from left to right)...
+  Label: stu60597
+ In use: 1
+Alloc #: 14
+
+  Label: stu18932
+ In use: 1
+Alloc #: 15
+
+  Label: stu63908
+ In use: 1
+Alloc #: 2
+
+  Label: stu59541
+ In use: 1
+Alloc #: 1
+
+After 3 frees...
+pagesInUse: 3, objectsInUse: 7, freeObjects: 5, allocations: 15, frees: 8
+
+XXXXXXXX
+  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+ XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX AA AA AA AA AA AA AA AA
+ AA AA AA AA AA AA AA AA XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX AA AA AA AA AA AA AA AA
+ AA AA AA AA AA AA AA AA XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB
+
+Dumping external header (in order of the blocks from left to right)...
+  Label: 
+ In use: 0
+Alloc #: 0
+
+  Label: 
+ In use: 0
+Alloc #: 0
+
+  Label: stu59476
+ In use: 1
+Alloc #: 10
+
+  Label: stu10428
+ In use: 1
+Alloc #: 9
+
+XXXXXXXX
+  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+ XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX CC CC CC CC CC CC CC CC
+ CC CC CC CC CC CC CC CC XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX CC CC CC CC CC CC CC CC
+ CC CC CC CC CC CC CC CC
+
+Dumping external header (in order of the blocks from left to right)...
+  Label: stu56984
+ In use: 1
+Alloc #: 13
+
+  Label: 
+ In use: 0
+Alloc #: 0
+
+  Label: stu57144
+ In use: 1
+Alloc #: 6
+
+  Label: 
+ In use: 0
+Alloc #: 0
+
+XXXXXXXX
+  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+ XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX CC CC CC CC CC CC CC CC
+ CC CC CC CC CC CC CC CC XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB
+
+Dumping external header (in order of the blocks from left to right)...
+  Label: stu60597
+ In use: 1
+Alloc #: 14
+
+  Label: 
+ In use: 0
+Alloc #: 0
+
+  Label: stu63908
+ In use: 1
+Alloc #: 2
+
+  Label: stu59541
+ In use: 1
+Alloc #: 1
+
+Running allocFreeTest with: 
+objectSize:24, pageSize:136, padBytes:0, objectsPerPage:4, maxPages:8, maxObjects:32
+alignment:0, leftAlign:0, interAlign:0, headerType:EXTERNAL, headerSize = 8
+
+After 5 allocations...
+pagesInUse: 3, objectsInUse: 12, freeObjects: 0, allocations: 20, frees: 8
+
+XXXXXXXX
+  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+ XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB
+
+Dumping external header (in order of the blocks from left to right)...
+  Label: stu70918
+ In use: 1
+Alloc #: 20
+
+  Label: stu60107
+ In use: 1
+Alloc #: 19
+
+  Label: stu59476
+ In use: 1
+Alloc #: 10
+
+  Label: stu10428
+ In use: 1
+Alloc #: 9
+
+XXXXXXXX
+  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+ XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB
+
+Dumping external header (in order of the blocks from left to right)...
+  Label: stu56984
+ In use: 1
+Alloc #: 13
+
+  Label: stu47406
+ In use: 1
+Alloc #: 17
+
+  Label: stu57144
+ In use: 1
+Alloc #: 6
+
+  Label: stu35596
+ In use: 1
+Alloc #: 18
+
+XXXXXXXX
+  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+ XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB
+
+Dumping external header (in order of the blocks from left to right)...
+  Label: stu60597
+ In use: 1
+Alloc #: 14
+
+  Label: stu58245
+ In use: 1
+Alloc #: 16
+
+  Label: stu63908
+ In use: 1
+Alloc #: 2
+
+  Label: stu59541
+ In use: 1
+Alloc #: 1
+
+After 5 frees...
+pagesInUse: 3, objectsInUse: 7, freeObjects: 5, allocations: 20, frees: 13
+
+XXXXXXXX
+  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+ XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX CC CC CC CC CC CC CC CC
+ CC CC CC CC CC CC CC CC XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX CC CC CC CC CC CC CC CC
+ CC CC CC CC CC CC CC CC XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB
+
+Dumping external header (in order of the blocks from left to right)...
+  Label: 
+ In use: 0
+Alloc #: 0
+
+  Label: 
+ In use: 0
+Alloc #: 0
+
+  Label: stu59476
+ In use: 1
+Alloc #: 10
+
+  Label: stu10428
+ In use: 1
+Alloc #: 9
+
+XXXXXXXX
+  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+ XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX CC CC CC CC CC CC CC CC
+ CC CC CC CC CC CC CC CC XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX CC CC CC CC CC CC CC CC
+ CC CC CC CC CC CC CC CC
+
+Dumping external header (in order of the blocks from left to right)...
+  Label: stu56984
+ In use: 1
+Alloc #: 13
+
+  Label: 
+ In use: 0
+Alloc #: 0
+
+  Label: stu57144
+ In use: 1
+Alloc #: 6
+
+  Label: 
+ In use: 0
+Alloc #: 0
+
+XXXXXXXX
+  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+ XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX CC CC CC CC CC CC CC CC
+ CC CC CC CC CC CC CC CC XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX BB BB BB BB BB BB BB BB
+ BB BB BB BB BB BB BB BB
+
+Dumping external header (in order of the blocks from left to right)...
+  Label: stu60597
+ In use: 1
+Alloc #: 14
+
+  Label: 
+ In use: 0
+Alloc #: 0
+
+  Label: stu63908
+ In use: 1
+Alloc #: 2
+
+  Label: stu59541
+ In use: 1
+Alloc #: 1
+
+

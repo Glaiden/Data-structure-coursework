@@ -1,0 +1,39 @@
+=== Test BST copy operator ===
+Running testCopy (copy ctor)...
+
+Adding ints into BST1
+
+Running addInts...
+
+BST after adding 5 elements:
+
+type: BST, height: 2, size: 5
+         2       
+
+     1       3       
+
+ 0               4       
+
+BST1:
+
+type: BST, height: 2, size: 5
+         2       
+
+     1       3       
+
+ 0               4       
+
+
+Constructing a new BST2 with BST1 as input...
+
+Copy constructed BST2:
+
+type: BST, height: 2, size: 5
+         2       
+
+     1       3       
+
+ 0               4       
+
+
+========================================

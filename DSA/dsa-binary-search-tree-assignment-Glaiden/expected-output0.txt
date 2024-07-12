@@ -1,0 +1,14 @@
+=== Test a small number of random int adds into a BST ===
+
+Running addInts...
+
+BST after adding 5 elements:
+
+type: BST, height: 2, size: 5
+         2       
+
+     1       3       
+
+ 0               4       
+
+========================================

@@ -1,0 +1,20 @@
+=== Test a trivial number of int adds and removes into a tree ===
+
+Running addInts...
+
+AVL after adding 3 elements:
+
+type: AVL, height: 1, size: 3
+    1       
+
+0       2       
+
+Running removeInts...
+
+AVL after removing 1 elements:
+type: AVL, height: 1, size: 2
+0       
+
+    2       
+
+========================================

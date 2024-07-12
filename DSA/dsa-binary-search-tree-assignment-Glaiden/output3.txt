@@ -1,0 +1,29 @@
+=== Test some random adds and removes on a BST ===
+Running addInts...
+
+BST after adding 8 elements:
+
+type: BST, height: 4, size: 8
+  0       
+
+              3       
+
+          2               6       
+
+      1               5       7       
+
+                  4       
+
+Running removeInts...
+
+BST after removing 2 elements:
+type: BST, height: 3, size: 6
+     2       
+
+ 1               6       
+
+             5       7       
+
+         4       
+
+========================================

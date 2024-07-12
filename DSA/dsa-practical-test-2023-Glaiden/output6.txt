@@ -1,0 +1,18 @@
+=== Test the inorder traversal of the AVL tree ===
+Running addInts...
+
+AVL after adding 20 elements:
+
+type: AVL, height: 4, size: 20
+                                              18      
+
+                      10                                  28      
+
+          4                           15              27              33      
+
+      2           7           12          16      20          31              40      
+
+  0           5           11      14                              32      37      
+
+Inorder traversal: 0 2 4 5 7 10 11 12 14 15 16 18 20 27 28 31 32 33 37 40 
+========================================

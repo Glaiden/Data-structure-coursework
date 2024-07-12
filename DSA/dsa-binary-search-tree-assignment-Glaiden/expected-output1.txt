@@ -1,0 +1,23 @@
+=== Test a larger number of random int adds into a BST ===
+Running addInts...
+
+BST after adding 20 elements:
+
+type: BST, height: 7, size: 20
+                           6       
+
+               3                   8       
+
+           2           5       7               11      
+
+   0               4                   9           12      
+
+       1                                   10          13      
+
+                                                                       17      
+
+                                                               15          18      
+
+                                                           14      16          19      
+
+========================================

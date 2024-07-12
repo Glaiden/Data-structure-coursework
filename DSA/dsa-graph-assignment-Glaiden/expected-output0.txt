@@ -1,0 +1,9 @@
+=== Test creating a tiny undirected graph ===
+
+Generating a graph of type 0...
+Dumping the graph...
+ID: [ 1] -- 10 --> [ 2] -- 20 --> [ 3]
+ID: [ 2] -- 10 --> [ 1] -- 30 --> [ 3]
+ID: [ 3] -- 20 --> [ 1] -- 30 --> [ 2]
+Generating Graphviz file...
+========================================

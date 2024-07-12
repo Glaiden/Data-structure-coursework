@@ -1,0 +1,31 @@
+=== Test BST subscript operator ===
+Running addChars...
+
+BST after adding 10 elements:
+
+type: BST, height: 3, size: 10
+                         g       
+
+             d                   i       
+
+     b               f       h       j       
+
+ a       c       e       
+
+Running testSubscript...
+
+  Value at index 5 is f
+
+Running testSubscript...
+
+  Value at index 0 is a
+
+Running testSubscript...
+
+  Value at index 9 is j
+
+Running testSubscript...
+
+  !!! BSTException: Index out of bounds
+
+========================================

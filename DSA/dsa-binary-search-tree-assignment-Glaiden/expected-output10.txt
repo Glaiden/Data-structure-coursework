@@ -1,0 +1,13 @@
+=== Stress Test BST ===
+Running addInts...
+
+BST after adding 10000 elements:
+
+type: BST, height: 30, size: 10000
+Running removeInts(using clear)...
+
+BST after clearing:
+
+type: BST, height: -1, size: 0
+  <EMPTY TREE>
+========================================

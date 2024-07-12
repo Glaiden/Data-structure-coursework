@@ -1,0 +1,12 @@
+=== Test Dijkstra's on the small undirected graph in case 1 ===
+
+Testing Dijkstra's algorithm...
+Dumping the DijkstraInfo...
+ID: [ 1]  cost:   0 path:  1
+ID: [ 2]  cost:   8 path:  1 >>  2
+ID: [ 3]  cost:  15 path:  1 >>  2 >>  3
+ID: [ 4]  cost:  20 path:  1 >>  2 >>  3 >>  4
+ID: [ 5]  cost:  13 path:  1 >>  5
+ID: [ 6]  cost:  18 path:  1 >>  2 >>  6
+
+========================================

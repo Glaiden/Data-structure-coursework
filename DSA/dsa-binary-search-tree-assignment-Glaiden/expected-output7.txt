@@ -1,0 +1,68 @@
+=== Test BST assignment operator ===
+Running testCopy (assignment)...
+
+Adding ints into BST1
+
+Running addInts...
+
+BST after adding 5 elements:
+
+type: BST, height: 2, size: 5
+         2       
+
+     1       3       
+
+ 0               4       
+
+BST1:
+
+type: BST, height: 2, size: 5
+         2       
+
+     1       3       
+
+ 0               4       
+
+
+Creating another BST(2)...
+
+And now adding different number of ints into BST2...
+
+Running addInts...
+
+BST after adding 10 elements:
+
+type: BST, height: 3, size: 10
+                         6       
+
+             3                   8       
+
+     1               5       7       9       
+
+ 0       2       4       
+
+BST2:
+
+type: BST, height: 3, size: 10
+                         6       
+
+             3                   8       
+
+     1               5       7       9       
+
+ 0       2       4       
+
+
+Assigning BST1 to BST2...
+
+Assigned BST2:
+
+type: BST, height: 2, size: 5
+         2       
+
+     1       3       
+
+ 0               4       
+
+
+========================================

@@ -1,0 +1,18 @@
+=== Test a large number of sorted int adds into an AVL tree ===
+
+Running addInts(sorted)...
+
+AVL after adding 20 elements:
+
+type: AVL, height: 4, size: 20
+                              7       
+
+              3                                               15      
+
+      1               5                       11                      17      
+
+  0       2       4       6           9               13          16      18      
+
+                                  8       10      12      14                  19      
+
+========================================

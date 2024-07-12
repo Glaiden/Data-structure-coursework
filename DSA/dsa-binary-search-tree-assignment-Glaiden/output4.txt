@@ -1,0 +1,23 @@
+=== Test clear(ing) all on a BST ===
+Running addInts...
+
+BST after adding 8 elements:
+
+type: BST, height: 4, size: 8
+  0       
+
+              3       
+
+          2               6       
+
+      1               5       7       
+
+                  4       
+
+Running removeInts(using clear)...
+
+BST after clearing:
+
+type: BST, height: -1, size: 0
+  <EMPTY TREE>
+========================================

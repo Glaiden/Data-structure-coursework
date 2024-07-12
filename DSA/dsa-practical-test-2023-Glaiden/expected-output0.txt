@@ -1,0 +1,10 @@
+=== Test whether we can add one single int into a tree ===
+
+Running addInts...
+
+AVL after adding 1 elements:
+
+type: AVL, height: 0, size: 1
+0       
+
+========================================

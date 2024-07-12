@@ -1,0 +1,7 @@
+=== Test allocator with excessive allocations ===
+Running allocFreeTest with: 
+objectSize:24, pageSize:66, padBytes:0, objectsPerPage:2, maxPages:2, maxObjects:4
+alignment:0, leftAlign:0, interAlign:0, headerType:BASIC, headerSize = 5
+
+ERROR when allocating new page: maximum number of pages has been allocated.
+
